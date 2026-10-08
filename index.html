@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Client Lead Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Client Lead Management System</h1>
+        <p>Mini CRM</p>
+    </header>
+
+    <main>
+
+        <!-- Lead Form -->
+        <section class="form-section">
+
+            <h2>Add New Lead</h2>
+
+            <form id="leadForm">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Client Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="source"
+                    placeholder="Lead Source (Website, LinkedIn, etc.)"
+                    required
+                >
+
+                <select id="status">
+                    <option value="New">New</option>
+                    <option value="Contacted">Contacted</option>
+                    <option value="Converted">Converted</option>
+                </select>
+
+                <textarea
+                    id="notes"
+                    placeholder="Notes / Follow-up details"
+                ></textarea>
+
+                <button type="submit">
+                    Add Lead
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Leads Section -->
+        <section class="leads-section">
+
+            <h2>Leads</h2>
+
+            <!-- Search -->
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search by name, email or source"
+            >
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Source</th>
+                        <th>Status</th>
+                        <th>Notes</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="leadTableBody">
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
